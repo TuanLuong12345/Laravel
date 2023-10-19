@@ -12,6 +12,7 @@
                 name="name"
                 type="text"
                 class="form-control"
+                placeholder="Nhập tên người dùng"
             >
         </div>
         <div class="col-md-6">
@@ -22,6 +23,7 @@
                 name="email"
                 type="email"
                 class="form-control"
+                placeholder="Nhập email"
             >
         </div>
         <div class="col-md-6">
@@ -32,6 +34,7 @@
                 name="password"
                 type="password"
                 class="form-control"
+                placeholder="Nhập mật khẩu"
             >
         </div>
         <div class="col-md-6" >
@@ -42,6 +45,7 @@
                 name="phone"
                 type="text"
                 class="form-control"
+                placeholder="Nhập số điện thoại"
             >
         </div>
         <div class="col-md-6">
@@ -52,6 +56,7 @@
                 name="role"
                 type="text"
                 class="form-control"
+                placeholder="Nhập vai trò"
             >
         </div>
         <button type="submit" class="btn btn-primary add">Thêm người dùng</button>
