@@ -7,6 +7,21 @@
 .col-md-6{
     margin-top: 15px;
 }
-
-
+.btn{
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.alert{
+    margin-top: 10px;
+    font-style: italic;
+}
+.column{
+    text-align: center;
+}
+.text-gray-700 {
+    margin-top: 20px;
+}
+.relative{
+    display: inline-block;
+}
 

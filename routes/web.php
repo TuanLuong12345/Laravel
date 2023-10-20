@@ -38,6 +38,12 @@ Route::prefix('users')->group(function () {
     )->name('users.index');
     Route::get('/create', [AdminUserController::class, 'create']
     )->name('users.create');
-    Route::post('/store/aaa', [AdminUserController::class, 'store']
+    Route::post('/store', [AdminUserController::class, 'store']
     )->name('users.store');
+    Route::get('/edit/{id}', [AdminUserController::class, 'edit']
+    )->name('users.edit');
+    Route::post('/update/{id}', [AdminUserController::class, 'update']
+    )->name('users.update');
+    Route::get('/delete/{id}', [AdminUserController::class, 'delete']
+    )->name('users.delete');
 });

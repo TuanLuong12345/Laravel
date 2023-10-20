@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class AuthRequest extends FormRequest
+class UserRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,7 +24,9 @@ class AuthRequest extends FormRequest
         return ([
             'email' => 'required|email',
             'password' => 'required|min:8',
-
+            'name' => 'required',
+            'phone' => 'required',
+            'role' => 'required'
         ]);
     }
     public function messages(): array
@@ -34,6 +36,9 @@ class AuthRequest extends FormRequest
             'email.email' => 'Bạn chưa nhập  đúng định dạng email . Ví dụ : 1234@gmail.com',
             'password.required' => 'Bạn chưa nhập mật khẩu',
             'password.min' => 'Mật khẩu của bạn quá ngắn',
+            'name.required' => 'Bạn chưa nhập tên',
+            'phone.required' => 'Bạn chưa nhập số điện thoại',
+            'role.required' => 'Bạn chưa nhập vai trò',
         ]);
     }
 }

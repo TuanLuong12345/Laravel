@@ -8,11 +8,6 @@ use Illuminate\Support\Facades\Auth;
 
 class LoginAdminController extends Controller
 {
-    public function __construct()
-    {
-
-    }
-
     public function index()
     {
         if (Auth::id()>0) {

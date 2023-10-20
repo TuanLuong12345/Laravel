@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <form method="post" action="{{route('users.store')}}">
+    <form method="post" action="{{route('users.update',['id'=>$users->id])}}">
         @csrf
         <div class="col-md-6">
             <label  class="form-label">
@@ -12,12 +12,10 @@
                 name="name"
                 type="text"
                 class="form-control"
-                value="{{old('name')}}"
-                placeholder="Nhập tên người dùng"
+                value="{{$users->name}}"
             >
-            @error('name')
-            <div class="alert alert-danger">* {{ $message }}</div>
-            @enderror
+
+
         </div>
         <div class="col-md-6">
             <label  class="form-label">
@@ -25,13 +23,11 @@
             </label>
             <input
                 name="email"
+                type="email"
                 class="form-control"
-                placeholder="Nhập email"
-                value="{{old('email')}}"
+                value="{{$users->email}}"
             >
-            @error('email')
-            <div class="alert alert-danger">* {{ $message }}</div>
-            @enderror
+
         </div>
         <div class="col-md-6">
             <label  class="form-label">
@@ -41,12 +37,8 @@
                 name="password"
                 type="password"
                 class="form-control"
-                placeholder="Nhập mật khẩu"
-                value="{{old('password')}}"
+                value="{{$users->password}}"
             >
-            @error('password')
-            <div class="alert alert-danger">* {{ $message }}</div>
-            @enderror
         </div>
         <div class="col-md-6" >
             <label  class="form-label">
@@ -56,12 +48,8 @@
                 name="phone"
                 type="text"
                 class="form-control"
-                placeholder="Nhập số điện thoại"
-                value="{{old('phone')}}"
+                value="{{$users->phone}}"
             >
-            @error('phone')
-            <div class="alert alert-danger">* {{ $message }}</div>
-            @enderror
         </div>
         <div class="col-md-6">
             <label  class="form-label">
@@ -71,14 +59,10 @@
                 name="role"
                 type="text"
                 class="form-control"
-                placeholder="Nhập vai trò"
-                value="{{old('role')}}"
+                value="{{$users->role}}"
             >
-            @error('role')
-            <div class="alert alert-danger">* {{ $message }}</div>
-            @enderror
         </div>
-        <button type="submit" class="btn btn-primary">Thêm người dùng</button>
+        <button type="submit" class="btn btn-primary">Cập nhật</button>
     </form>
 
 @endsection

@@ -19,12 +19,12 @@
                             <table class="table">
                                 <thead>
                                 <tr>
-                                    <th scope="col">Id</th>
-                                    <th scope="col">Tên User</th>
-                                    <th scope="col">Email</th>
-                                    <th scope="col">Phone</th>
-                                    <th scope="col">Role</th>
-                                    <th scope="col">Action</th>
+                                    <th scope="col" class="column">Id</th>
+                                    <th scope="col" class="column">Tên User</th>
+                                    <th scope="col" class="column">Email</th>
+                                    <th scope="col" class="column">Phone</th>
+                                    <th scope="col"class="column">Role</th>
+                                    <th scope="col" class="column">Action</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -37,17 +37,17 @@
                                         <td>{{$user->phone}}</td>
                                         <td>{{$user->role}}</td>
                                         <td>
-                                            <a href="#"
+                                            <a href="{{route('users.edit',['id'=>$user->id])}}"
                                                class="btn btn-danger">
                                                 Edit
                                             </a>
-                                            <a href=""
-                                               data-url=""
+                                            <a href="{{route('users.delete',['id'=>$user->id])}}"
                                                class="btn btn-danger action_delete">
                                                 Delete
                                             </a>
                                         </td>
                                     </tr>
+
                                 @endforeach
 
                                 </tbody>
